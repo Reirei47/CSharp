@@ -1,29 +1,21 @@
 using DapperApi.Repositories;
-using Scalar.AspNetCore;
+// using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddControllers();
+builder.Services.AddSwaggerGen();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 
-// Khai báo dịch vụ OpenAPI chính chủ của .NET 10
-builder.Services.AddOpenApi(); 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // 1. Sinh file openapi.json
-app.MapOpenApi();
-    
-    // 2. Đưa Scalar về trang chủ bằng cách truyền hẳn chuỗi rỗng "" vào làm tham số đầu tiên
-    app.MapScalarApiReference("", options => 
-    {
-        // Bạn có thể thêm cấu hình khác ở đây nếu cần, ví dụ đặt tựa đề:
-        options.WithTitle("Dapper API Documentation");
-    });
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 // Tạm thời tắt chuyển hướng HTTPS để chạy local mượt mà
