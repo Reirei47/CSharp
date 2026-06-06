@@ -62,5 +62,12 @@ namespace DapperApi.Controllers
             _studentRepository.Delete(id);
             return NoContent();
         }
+
+        [HttpGet("with-courses")]
+        public ActionResult<IEnumerable<StudentWithCourses>> GetAllWithCourses()
+        {
+            var studentsWithCourses = _studentRepository.GetAllWithCourses();
+            return Ok(studentsWithCourses);
+        }
     }
 }

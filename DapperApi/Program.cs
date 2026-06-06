@@ -15,10 +15,15 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    // 1. Sinh file openapi.json
+app.MapOpenApi();
     
-    // KÍCH HOẠT GIAO DIỆN SCALAR TẠI ĐÂY
-    app.MapScalarApiReference();    
+    // 2. Đưa Scalar về trang chủ bằng cách truyền hẳn chuỗi rỗng "" vào làm tham số đầu tiên
+    app.MapScalarApiReference("", options => 
+    {
+        // Bạn có thể thêm cấu hình khác ở đây nếu cần, ví dụ đặt tựa đề:
+        options.WithTitle("Dapper API Documentation");
+    });
 }
 
 // Tạm thời tắt chuyển hướng HTTPS để chạy local mượt mà
