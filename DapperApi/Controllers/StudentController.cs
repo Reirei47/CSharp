@@ -49,7 +49,7 @@ namespace DapperApi.Controllers
                 return NotFound();
 
             _studentRepository.Update(student);
-            return NoContent();
+            return Ok("Cập nhật thành công");
         }
 
         [HttpDelete("{id}")]
@@ -60,10 +60,10 @@ namespace DapperApi.Controllers
                 return NotFound();
 
             _studentRepository.Delete(id);
-            return NoContent();
+            return Ok("Xóa thành công");
         }
 
-        [HttpGet("with-courses")]
+        [HttpGet("courses")]
         public ActionResult<IEnumerable<StudentWithCourses>> GetAllWithCourses()
         {
             var studentsWithCourses = _studentRepository.GetAllWithCourses();
