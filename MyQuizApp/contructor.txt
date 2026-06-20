@@ -48,3 +48,14 @@ MultipleChoiceQuestion     TrueFalseQuestion
              List<IQuestion>
                      │
                    Quiz
+
+
+Nếu muốn ngẫu nhiên trong câu hỏi thì 
+public Quiz(List<IQuestion> questions)
+{
+Random random = new Random();
+
+    this.questions = questions
+        .OrderBy(q => random.Next())
+        .ToList();
+}
