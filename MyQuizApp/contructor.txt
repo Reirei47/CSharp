@@ -1,0 +1,50 @@
+I: Kiến trúc thực hiện
+Program.cs
+    |
+    v
+QuestionBank<IQuestion>  (Tôi đa số dùng để kiểm tra interface vd trong một class mà nó sử dụng interface này đều có CheckAwnser)
+    |
+    v
+Quiz
+    |
+    v
+List<IQuestion>
+    |
+    ---> MultipleChoiceQuestion
+    |
+    ----------> TrueFalseQuestion
+
+
+
+
+
+
+
+
+
+Quiz
+    |
+    -----------> AnswerRecord
+2: Nhiệm vụ từng thành phần
+
+Program.cs --------> Khởi tạo dự liệu, gọi chương trình chạy 
+Quiz.cs: đầu não của chương trình  
+AnswerRecord.cs: Có thể hiểu là lưu tiến trình của người dùng C1 Đ -> C2 S ->>>>>> (vừa lưu đáp án đúng)
+IQuestion: Đây là phương thức đại diện cho tính đa hình của bài toán có thể xem hai loại câu hỏi đều là IQuestion
+QuestionBank.cs: Nơi lưu IQuestion
+MultipleChoiceQuestion and TrueFalseQuestion đều là 2 loại câu hỏi 
+
+                                                IQuestion
+                     ▲
+                     │
+      ┌──────────────┴──────────────┐
+      │                             │
+MultipleChoiceQuestion     TrueFalseQuestion
+      │                             │
+      └──────────────┬──────────────┘
+                     │
+      QuestionBank<IQuestion> (Kho lưu câu hỏi)
+                     │
+             List<IQuestion>
+                     │
+                   Quiz

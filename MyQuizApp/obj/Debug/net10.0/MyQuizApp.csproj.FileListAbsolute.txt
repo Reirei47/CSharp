@@ -1,0 +1,14 @@
+C:\Users\ARtone\Documents\Lab\MyQuizApp\bin\Debug\net10.0\MyQuizApp.exe
+C:\Users\ARtone\Documents\Lab\MyQuizApp\bin\Debug\net10.0\MyQuizApp.deps.json
+C:\Users\ARtone\Documents\Lab\MyQuizApp\bin\Debug\net10.0\MyQuizApp.runtimeconfig.json
+C:\Users\ARtone\Documents\Lab\MyQuizApp\bin\Debug\net10.0\MyQuizApp.dll
+C:\Users\ARtone\Documents\Lab\MyQuizApp\bin\Debug\net10.0\MyQuizApp.pdb
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.AssemblyInfoInputs.cache
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.AssemblyInfo.cs
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.csproj.CoreCompileInputs.cache
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.dll
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\refint\MyQuizApp.dll
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.pdb
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\MyQuizApp.genruntimeconfig.cache
+C:\Users\ARtone\Documents\Lab\MyQuizApp\obj\Debug\net10.0\ref\MyQuizApp.dll
